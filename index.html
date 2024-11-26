@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Strength Checker</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: black;
+      }
+
+      .container {
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: white;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+      }
+
+      input {
+        width: 80%;
+        padding: 10px;
+        margin: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      #strength-bar {
+        height: 10px;
+        width: 100%;
+        border-radius: 5px;
+        margin-top: 10px;
+      }
+
+      #strength-text {
+        font-size: 14px;
+        margin-top: 10px;
+      }
+
+      .weak {
+        background-color: red;
+      }
+
+      .medium {
+        background-color: yellow;
+      }
+
+      .strong {
+        background-color: green;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    
+    <div class="container">
+      <h1>Password Strength Checker</h1>
+      <input
+        type="text"
+        id="password"
+        placeholder="Enter your password"
+        oninput="checkStrength()"
+      />
+      <div id="strength-bar"></div>
+      <p id="strength-text"></p>
+    </div>
+
+    <script src="./index.js">
+    </script>
+  </body>
+</html>
